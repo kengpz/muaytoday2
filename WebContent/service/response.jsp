@@ -12,5 +12,5 @@
 		params.put(key.toLowerCase(), (String)request.getParameter(key));
 	}
 	RestTemplateService restTemplateService = (RestTemplateService) ApplicationContextFactory.getInstance().getBean("restTemplateService");
-	Number result = restTemplateService.getForNumber("/service/manage.jsp?action="String.valueOf(params.get("action")) , params);
+	Number result = restTemplateService.getForNumber("/service/manage.jsp?action=" + String.valueOf(params.get("action")) , params);
 %><%=result %>
